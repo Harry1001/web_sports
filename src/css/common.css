@@ -3,6 +3,25 @@
     src: url("../font/Roboto-Thin.ttf");
 }
 
+@font-face {
+    font-family: "Nothing You Could Do";
+    src: url("../font/NothingYouCouldDo.ttf");
+}
+
+#main-logo {
+    font-family: "Nothing You Could Do";
+    font-size: 100px;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.svg-wrapper {
+
+    width: 30%;
+    height: auto;
+    margin: auto;
+}
+
 .nav-side {
     width: 20%;
     float: left;
@@ -39,4 +58,17 @@
 .sport-chart{
     width: 100%;
     height: 400px;
+}
+
+footer {
+    text-align: center;
+}
+
+.table-hover tr {
+    cursor: pointer;
+}
+
+.nav.navbar-nav .dropdown a {
+    padding-top: 9px;
+    padding-bottom: 9px;
 }

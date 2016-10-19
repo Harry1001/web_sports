@@ -1,181 +1,160 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh_CN">
 <head>
     <meta charset="UTF-8">
     <title>健身活动 Let's Move ! </title>
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="../css/activity.css">
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 </head>
 <body>
-<div class="container" id="navbar-container">
-    <nav class="navbar" id="head-navbar">
-        <ul>
-            <li><a href="#">首页</a></li>
-            <li><a href="#">身体数据</a></li>
-            <li><a href="#" class="active">健身活动</a></li>
-            <li><a href="#">粉丝好友</a></li>
-        </ul>
-    </nav>
-    <div class="login-info">
-        <div class="dropdown">
-            <button class="dropbtn">username</button>
-            <div class="dropdown-content">
-                <a href="#">我的资料</a>
-                <a href="#">退出登录</a>
-            </div>
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Let's Move ! </a>
         </div>
-    </div>
-</div>
-<div class="container" id="body-container">
-    <section id="activity-sidebar">
 
-        <nav class="navbar" id="activity-navbar">
-            <ul>
-                <li><a href="#" class="active">所有活动</a></li>
-                <li><a href="#">我发起的</a></li>
-                <li><a href="#">我参加的</a></li>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="statistics-sport.html">身体数据</a></li>
+                <li class="active"><a href="activity.html">健身活动</a></li>
+                <li><a href="fans.html">粉丝好友</a></li>
             </ul>
-        </nav>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img width="32px" height="32px" src="../picture/avatar.jpg">Mr.Zero <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">我的资料</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">退出登录</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container -->
+</nav>
+<div class="container">
+    <section class="nav-side">
+        <ul class="nav nav-pills nav-stacked" role="tablist">
+            <li role="presentation" class="active"><a href="#">所有活动</a></li>
+            <li role="presentation"><a href="activity-launch.html">我发起的</a></li>
+            <li role="presentation"><a href="activity-participate.html">我参与的</a></li>
+        </ul>
     </section>
-    <section class="activity-list">
-        <h1>所有活动</h1>
-        <div class="filter">
-            <button class="click-dropbtn">全部</button>
-            <div class="dropdown-menu">
-                <a href="#">全部</a>
-                <a href="#">二人活动</a>
-                <a href="#">多人活动</a>
-            </div>
-        </div>
-        <div id="new-activity">
-            <button>发起新的活动</button>
-        </div>
-        <div class="activities">
-            <ul>
-                <li>
-                    <table onclick="location.href='#'">
-                        <tr>
-                            <th rowspan="2" class="activity-name">决战紫禁之巅</th>
-                            <th>活动时间</th>
-                            <th>活动地点</th>
-                            <th>活动类型</th>
-                        </tr>
-                        <tr>
-                            <td>2016/10/10</td>
-                            <td>紫金山</td>
-                            <td>二人活动</td>
-                        </tr>
-                    </table>
-                </li>
-                <li>
-                    <table>
-                        <tr>
-                            <th rowspan="2" class="activity-name">活动名称</th>
-                            <th>活动时间</th>
-                            <th>活动地点</th>
-                            <th>活动类型</th>
-                        </tr>
-                        <tr>
-                            <td>2016/10/10</td>
-                            <td>紫金山</td>
-                            <td>二人活动</td>
-                        </tr>
-                    </table>
-                </li>
-                <li>
-                    <table>
-                        <tr>
-                            <th rowspan="2" class="activity-name">活动名称</th>
-                            <th>活动时间</th>
-                            <th>活动地点</th>
-                            <th>活动类型</th>
-                        </tr>
-                        <tr>
-                            <td>2016/10/10</td>
-                            <td>紫金山</td>
-                            <td>二人活动</td>
-                        </tr>
-                    </table>
-                </li>
-                <li>
-                    <table>
-                        <tr>
-                            <th rowspan="2" class="activity-name">活动名称</th>
-                            <th>活动时间</th>
-                            <th>活动地点</th>
-                            <th>活动类型</th>
-                        </tr>
-                        <tr>
-                            <td>2016/10/10</td>
-                            <td>紫金山</td>
-                            <td>二人活动</td>
-                        </tr>
-                    </table>
-                </li>
-                <li>
-                    <table>
-                        <tr>
-                            <th rowspan="2" class="activity-name">活动名称</th>
-                            <th>活动时间</th>
-                            <th>活动地点</th>
-                            <th>活动类型</th>
-                        </tr>
-                        <tr>
-                            <td>2016/10/10</td>
-                            <td>紫金山</td>
-                            <td>二人活动</td>
-                        </tr>
-                    </table>
-                </li>
-                <li>
-                    <table>
-                        <tr>
-                            <th rowspan="2" class="activity-name">活动名称</th>
-                            <th>活动时间</th>
-                            <th>活动地点</th>
-                            <th>活动类型</th>
-                        </tr>
-                        <tr>
-                            <td>2016/10/10</td>
-                            <td>紫金山</td>
-                            <td>二人活动</td>
-                        </tr>
-                    </table>
-                </li>
-                <li>
-                    <table>
-                        <tr>
-                            <th rowspan="2" class="activity-name">活动名称</th>
-                            <th>活动时间</th>
-                            <th>活动地点</th>
-                            <th>活动类型</th>
-                        </tr>
-                        <tr>
-                            <td>2016/10/10</td>
-                            <td>紫金山</td>
-                            <td>二人活动</td>
-                        </tr>
-                    </table>
-                </li>
-                <li>
-                    <table>
-                        <tr>
-                            <th rowspan="2" class="activity-name">活动名称</th>
-                            <th>活动时间</th>
-                            <th>活动地点</th>
-                            <th>活动类型</th>
-                        </tr>
-                        <tr>
-                            <td>2016/10/10</td>
-                            <td>紫金山</td>
-                            <td>二人活动</td>
-                        </tr>
-                    </table>
-                </li>
-            </ul>
-        </div>
+
+    <section class="container content-container">
+        <ul class="timeline">
+
+            <!-- Item 1 -->
+            <li>
+                <div class="direction-r">
+                    <div class="flag-wrapper">
+                        <a href="activity-detail.html"><span class="flag">决战紫禁之巅</span></a>
+                        <span class="time-wrapper"><span class="time">2016/10/10 - present</span></span>
+                    </div>
+                    <div class="desc">web大作业撸撸撸！！！</div>
+                </div>
+            </li>
+
+            <!-- Item 2 -->
+            <li>
+                <div class="direction-l">
+                    <div class="flag-wrapper">
+                        <a href="activity-detail.html"><span class="flag">一起来约玄武湖？</span></a>
+                        <span class="time-wrapper"><span class="time">2011 - 2013</span></span>
+                    </div>
+                    <div class="desc">web大作业撸撸撸！！！</div>
+                </div>
+            </li>
+
+
+            <!-- Item 1 -->
+            <li>
+                <div class="direction-r">
+                    <div class="flag-wrapper">
+                        <a href="activity-detail.html"><span class="flag">决战紫禁之巅</span></a>
+                        <span class="time-wrapper"><span class="time">2016/10/10 - present</span></span>
+                    </div>
+                    <div class="desc">web大作业撸撸撸！！！</div>
+                </div>
+            </li>
+
+            <!-- Item 2 -->
+            <li>
+                <div class="direction-l">
+                    <div class="flag-wrapper">
+                        <a href="activity-detail.html"><span class="flag">一起来约玄武湖？</span></a>
+                        <span class="time-wrapper"><span class="time">2011 - 2013</span></span>
+                    </div>
+                    <div class="desc">web大作业撸撸撸！！！</div>
+                </div>
+            </li>
+
+            <!-- Item 1 -->
+            <li>
+                <div class="direction-r">
+                    <div class="flag-wrapper">
+                        <a href="activity-detail.html"><span class="flag">决战紫禁之巅</span></a>
+                        <span class="time-wrapper"><span class="time">2016/10/10 - present</span></span>
+                    </div>
+                    <div class="desc">web大作业撸撸撸！！！</div>
+                </div>
+            </li>
+
+            <!-- Item 2 -->
+            <li>
+                <div class="direction-l">
+                    <div class="flag-wrapper">
+                        <a href="activity-detail.html"><span class="flag">一起来约玄武湖？</span></a>
+                        <span class="time-wrapper"><span class="time">2011 - 2013</span></span>
+                    </div>
+                    <div class="desc">web大作业撸撸撸！！！</div>
+                </div>
+            </li>
+
+            <!-- Item 1 -->
+            <li>
+                <div class="direction-r">
+                    <div class="flag-wrapper">
+                        <a href="activity-detail.html"><span class="flag">决战紫禁之巅</span></a>
+                        <span class="time-wrapper"><span class="time">2016/10/10 - present</span></span>
+                    </div>
+                    <div class="desc">web大作业撸撸撸！！！</div>
+                </div>
+            </li>
+
+            <!-- Item 2 -->
+            <li>
+                <div class="direction-l">
+                    <div class="flag-wrapper">
+                        <a href="activity-detail.html"><span class="flag">一起来约玄武湖？</span></a>
+                        <span class="time-wrapper"><span class="time">2011 - 2013</span></span>
+                    </div>
+                    <div class="desc">web大作业撸撸撸！！！</div>
+                </div>
+            </li>
+        </ul>
+
     </section>
 </div>
+
+
+
+
 
 <footer>
     &copy; 本网站为Mr. Zero为web大作业所写的网站，保留一切权利。

@@ -2,19 +2,14 @@
 <html lang="zh_CN">
 <head>
     <meta charset="UTF-8">
-    <title>身体数据 Let's Move ! </title>
+    <title>健身活动 Let's Move ! </title>
     <!-- 新 Bootstrap 核心 CSS 文件 -->
     <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/common.css">
-    <link rel="stylesheet" href="../css/statistics.css">
     <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
     <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
-
     <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
     <script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-
-    <script src="../js/highcharts.js"></script>
-    <script src="../js/statistic-body.js"></script>
 </head>
 <body>
 <nav class="navbar navbar-default" role="navigation">
@@ -34,8 +29,8 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <li><a href="index.html">首页</a></li>
-                <li class="active"><a href="statistics-sport.html">身体数据</a></li>
-                <li><a href="activity.html">健身活动</a></li>
+                <li><a href="statistics-sport.html">身体数据</a></li>
+                <li class="active"><a href="activity.html">健身活动</a></li>
                 <li><a href="fans.html">粉丝好友</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
@@ -53,52 +48,31 @@
 </nav>
 <div class="container">
     <section class="nav-side">
-    <ul class="nav nav-pills nav-stacked" role="tablist">
-        <li role="presentation"><a href="statistics-sport.html">我的运动</a></li>
-        <li role="presentation" class="active"><a href="#">身体管理</a></li>
-        <li role="presentation"><a href="statistics-sleep.html">睡眠分析</a></li>
-        <li role="presentation"><a href="#">数据注入</a></li>
-    </ul>
+        <ul class="nav nav-pills nav-stacked" role="tablist">
+            <li role="presentation"><a href="activity.html">所有活动</a></li>
+            <li role="presentation"><a href="activity-launch.html">我发起的</a></li>
+            <li role="presentation"><a href="activity-participate.html">我参与的</a></li>
+        </ul>
     </section>
+
     <section class="container content-container">
-        <div>
-            <h2>当前状态</h2>
+        <h1>决战紫禁之巅</h1>
+        <div style="padding: 10px 20px;">
+            <div style="min-height: 100px;font-size: 1.5em;">
+                这里是活动说明！这里是活动说明！
+            </div>
             <div>
-                <img src="../picture/man-balancing.png" class="img-rounded" style="float: right;">
-                <div>
-                    <div style="display: inline-block">身高 <span class="number body-number">170</span> cm</div>
-                    <div style="display: inline-block; margin-left: 100px">体重 <span class="number body-number">60</span> kg</div>
-                </div>
-                <div class="prograss-bar">
-                    <div id="hand-container"><span class="glyphicon glyphicon-hand-down" id="hand-down"></span></div>
-                    <div>
-                        <img src="../picture/man-thin.png" class="body-shape-icon">
-                        <div id="gradient"></div>
-                        <img src="../picture/man-fat.png" class="body-shape-icon">
-                    </div>
-                    <table style="width: 80%;margin-left: 10%;">
-                        <tr>
-                            <td>偏瘦</td>
-                            <td>健康</td>
-                            <td>超重</td>
-                            <td>肥胖</td>
-                        </tr>
-                    </table>
-                </div>
+                <div style="display: inline-block"><img src="../picture/hourglass.png">距离活动开始还有<span class="number">7</span>小时</div>
+                <div style="display: inline-block; margin-left: 20%;"><img src="../picture/location.png">南京紫金山</div>
             </div>
         </div>
-        <div class="chart-container">
-            <h2>历史数据</h2>
-            <div>
-                <div class="label-container">
-                    <span class="label label-default">30天</span>
-                    <span class="label label-info">60天</span>
-                    <span class="label label-default">半年</span>
-                    <span class="label label-default">一年</span>
-                </div>
-                <br>
-                <div class="body-chart" id="weight-height-chart"></div>
-            </div>
+        <div style="margin-top: 20px">
+            <button type="button" class="btn btn-success" style="margin-right: 30px">我要加入</button>
+            <button type="button" class="btn btn-warning">我要举报</button>
+        </div>
+        <div style="margin-top: 40px">
+            <h2>活动成员</h2>
+            <div><img width="32px" height="32px" src="../picture/avatar.jpg"><a href="fans-detail.html">Mr. Robot</a></div>
         </div>
     </section>
 </div>
