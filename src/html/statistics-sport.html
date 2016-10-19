@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+    <meta charset="UTF-8">
+    <title>身体数据 Let's Move ! </title>
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+
+    <script src="../js/highcharts.js"></script>
+    <script src="../js/statistics.js"></script>
+
+</head>
+<body>
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Brand</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li><a href="#">首页</a></li>
+                <li class="active"><a href="#">身体数据</a></li>
+                <li><a href="#">健身活动</a></li>
+                <li><a href="#">粉丝好友</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">头像</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Mr.Zero <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">我的资料</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">退出登录</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container -->
+</nav>
+<div class="container">
+    <section class="nav-side">
+        <ul class="nav nav-pills nav-stacked" role="tablist">
+            <li role="presentation" class="active"><a href="#">我的运动</a></li>
+            <li role="presentation"><a href="#">身体管理</a></li>
+            <li role="presentation"><a href="#">睡眠分析</a></li>
+            <li role="presentation"><a href="#">数据注入</a></li>
+        </ul>
+    </section>
+    <section class="content-container">
+        <h2>你的运动总量</h2>
+        <div class="img-container">
+            <table class="icon-table">
+                <tr>
+                    <td rowspan="2"><img src="../picture/running.png" class="img-rounded img-white"></td>
+                    <td>累积运动距离</td>
+                </tr>
+                <tr>
+                    <td><span class="number">0</span>公里</td>
+                </tr>
+            </table>
+            <table class="icon-table">
+                <tr>
+                    <td rowspan="2"><img src="../picture/clock.png" class="img-rounded img-white"></td>
+                    <td>累积运动时间</td>
+                </tr>
+                <tr>
+                    <td><span class="number">0</span>天</td>
+                </tr>
+            </table>
+            <table class="icon-table">
+                <tr>
+                    <td rowspan="2"><img src="../picture/fire.png" class="img-rounded img-white"></td>
+                    <td>累积燃烧热量</td>
+                </tr>
+                <tr>
+                    <td><span class="number">0</span>卡路里</td>
+                </tr>
+            </table>
+        </div>
+        <div class="chart-container">
+            <h2>今日数据</h2>
+            <table class="table">
+                <tr>
+                    <th>运动距离</th>
+                    <th>运动时间</th>
+                    <th>运动步数</th>
+                    <th>燃烧热量</th>
+                </tr>
+                <tr>
+                    <td><span class="number">0</span> 公里</td>
+                    <td><span class="number">0</span> 小时</td>
+                    <td><span class="number">0</span> 步</td>
+                    <td><span class="number">0</span> 卡路里</td>
+                </tr>
+            </table>
+            <h3>运动曲线图</h3>
+            <div class="sport-chart" id="today-sport-chart">
+            </div>
+        </div>
+        <div class="chart-container">
+            <h2>本周数据</h2>
+            <table class="table">
+                <tr>
+                    <th>运动距离</th>
+                    <th>运动时间</th>
+                    <th>运动步数</th>
+                    <th>燃烧热量</th>
+                </tr>
+                <tr>
+                    <td><span class="number">0</span> 公里</td>
+                    <td><span class="number">0</span> 小时</td>
+                    <td><span class="number">0</span> 步</td>
+                    <td><span class="number">0</span> 卡路里</td>
+                </tr>
+            </table>
+            <h3>运动曲线图</h3>
+            <div class="sport-chart" id="week-sport-chart">
+            </div>
+        </div>
+        <div class="chart-container">
+            <h2>本月数据</h2>
+            <table class="table">
+                <tr>
+                    <th>运动距离</th>
+                    <th>运动时间</th>
+                    <th>运动步数</th>
+                    <th>燃烧热量</th>
+                </tr>
+                <tr>
+                    <td><span class="number">0</span> 公里</td>
+                    <td><span class="number">0</span> 小时</td>
+                    <td><span class="number">0</span> 步</td>
+                    <td><span class="number">0</span> 卡路里</td>
+                </tr>
+            </table>
+            <h3>运动曲线图</h3>
+            <div class="sport-chart" id="month-sport-chart">
+            </div>
+        </div>
+    </section>
+</div>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+    <meta charset="UTF-8">
+    <title>身体数据 Let's Move ! </title>
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/statistics.css">
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+
+    <script src="../js/highcharts.js"></script>
+    <script src="../js/statistic-body.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Brand</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li><a href="#">首页</a></li>
+                <li class="active"><a href="#">身体数据</a></li>
+                <li><a href="#">健身活动</a></li>
+                <li><a href="#">粉丝好友</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">头像</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Mr.Zero <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">我的资料</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">退出登录</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container -->
+</nav>
+<div class="container">
+    <section class="nav-side">
+    <ul class="nav nav-pills nav-stacked" role="tablist">
+        <li role="presentation"><a href="#">我的运动</a></li>
+        <li role="presentation" class="active"><a href="#">身体管理</a></li>
+        <li role="presentation"><a href="#">睡眠分析</a></li>
+        <li role="presentation"><a href="#">数据注入</a></li>
+    </ul>
+    </section>
+    <section class="content-container">
+        <div>
+            <h2>当前状态</h2>
+            <div>
+                <img src="../picture/man-balancing.png" class="img-rounded" style="float: right;">
+                <div>
+                    <div style="display: inline-block">身高 <span class="number body-number">170</span> cm</div>
+                    <div style="display: inline-block; margin-left: 100px">体重 <span class="number body-number">60</span> kg</div>
+                </div>
+                <div class="prograss-bar">
+                    <div id="hand-container"><span class="glyphicon glyphicon-hand-down" id="hand-down"></span></div>
+                    <div>
+                        <img src="../picture/man-thin.png" class="body-shape-icon">
+                        <div id="gradient"></div>
+                        <img src="../picture/man-fat.png" class="body-shape-icon">
+                    </div>
+                    <table style="width: 80%;margin-left: 10%;">
+                        <tr>
+                            <td>偏瘦</td>
+                            <td>健康</td>
+                            <td>超重</td>
+                            <td>肥胖</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="chart-container">
+            <h2>历史数据</h2>
+            <div>
+                <div class="label-container">
+                    <span class="label label-default">30天</span>
+                    <span class="label label-info">60天</span>
+                    <span class="label label-default">半年</span>
+                    <span class="label label-default">一年</span>
+                </div>
+                <br>
+                <div class="body-chart" id="weight-height-chart"></div>
+            </div>
+        </div>
+    </section>
+</div>
+</body>
+</html>

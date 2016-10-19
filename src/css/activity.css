@@ -1,22 +1,121 @@
+#body-container {
+    margin-top: 66px;
+}
+
 #activity-sidebar {
     position: fixed;
-    width: 25%;
+    width: 300px;
     height: 100%;
     overflow: auto;
+    z-index: 2;
+    background-color: rgba(0,128,0,0.1);
+}
+
+#activity-navbar {
+    display: block;
 }
 
 #activity-navbar ul {
     list-style-type: none;
-    background-color: #f1f1f1;
 }
 
 #activity-navbar ul li a {
     display: block;
+    font-size: 20px;
     color: #000;
-    padding: 8px 16px;
+    padding: 20px 16px;
     text-decoration: none;
+    text-align: center;
+}
+
+#activity-navbar ul li a.active {
+    background-color: #88cc00;
 }
 
 section.activity-list {
-    margin-left: 25%;
+    margin-left: 350px;
+}
+
+.filter {
+    position: relative;
+    display: inline-block;
+}
+
+.filter .click-dropbtn {
+    border: 1px solid grey;
+    border-radius: 2px;
+    cursor: pointer;
+    font-size: 1.3em;
+    width: 5em;
+    height: 1.4em;
+    color: black;
+    background-color: white;
+}
+
+.filter .dropdown-menu {
+    display: none;
+    list-style-type: none;
+    position: absolute;
+    width: 5em;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.filter .dropdown-menu a {
+    display: block;
+    background-color: white;
+}
+
+.filter .dropdown-menu a:hover {
+    background-color: grey;
+}
+
+.filter:hover .dropdown-menu {
+    display: block;
+}
+
+.filter .dropdown-menu a {
+    padding: 5px 0;
+}
+
+#new-activity {
+    float: right;
+    margin-right: 20px;
+}
+
+#new-activity button {
+    border: none;
+    font-size: 20px;
+    padding: 20px;
+    background-color: #009900;
+    color: white;
+}
+
+.activities {
+    clear: left;
+    margin-top: 50px;
+}
+
+.activities ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.activities ul li {
+    padding:5px 10px;
+    margin: 20px 20px 20px 0;
+    background-color: rgba(0,128,0,0.5);
+    border-radius: 5px;
+}
+
+th {
+    padding: 10px 20px;
+    text-align: center;
+    width: 100px;
+}
+
+td {
+    padding:10px 20px;
+    text-align: center;
 }
